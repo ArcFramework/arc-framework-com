@@ -1,0 +1,40 @@
+{
+    "name": "vendor-name/arc-framework-com",
+    "description": "",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "",
+            "email": "my@email.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "arc-framework/framework": "dev-master"
+    },
+    "require-dev": {
+        "mockery/mockery": "^0.9.9",
+        "symfony/css-selector": "~3.1",
+        "symfony/dom-crawler": "~3.1"
+    },
+    "autoload": {
+        "psr-4":{
+            "ArcFramework\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ]
+    },
+    "post-root-package-install": [
+        "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+    ],
+    "post-install-cmd": [
+    ],
+    "post-update-cmd": [
+    ]
+}
