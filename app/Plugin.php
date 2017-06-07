@@ -6,6 +6,13 @@ use Arc\Application;
 
 class Plugin extends Application
 {
+    public function boot()
+    {
+        parent::boot();
+
+        self::setApplicationInstance($this);
+    }
+
     /**
      * Set the shared instance of the application.
      *
