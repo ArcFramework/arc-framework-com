@@ -17,6 +17,7 @@ return [
         /*
          * Framework Service Providers...
          */
+        Illuminate\Cache\CacheServiceProvider::class,
         Illuminate\Database\DatabaseServiceProvider::class,
         Illuminate\Filesystem\FilesystemServiceProvider::class,
         Illuminate\Pipeline\PipelineServiceProvider::class,

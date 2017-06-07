@@ -1,5 +1,18 @@
 <?php
 
+/**
+ * Set the default documentation version...
+ */
+define('DEFAULT_VERSION', '0.3');
+
+/**
+ * Convert some text to Markdown...
+ */
+function markdown($text)
+{
+    return (new ParsedownExtra)->text($text);
+}
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +24,7 @@
 |
 */
 
-/*
-$routes->get('/some-uri', function () {
-    return view('welcome');
-});
-**/
+$router->get('/', 'DocsController@showRootPage');
+
+$router->get('docs', 'DocsController@showRootPage');
+$router->get('docs/{version}/{page?}', 'DocsController@show');
