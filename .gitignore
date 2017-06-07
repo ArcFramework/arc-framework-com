@@ -3,3 +3,4 @@ bootstrap/cache
 storage
 studio.json
 vendor
+.env
