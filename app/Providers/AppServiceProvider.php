@@ -1,6 +1,6 @@
 <?php
 
-namespace Vendor\PluginName\Providers;
+namespace ArcFramework\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
